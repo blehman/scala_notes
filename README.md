@@ -35,5 +35,11 @@ alicePipe.map { line => line.length }
 alicePipe.map { line => line.length }.limit(10).dump  
 alicePipe.map { line => line.length }.filter { length: Int => length > 0 }.limit(10).dump  
 </pre>
+...skippy to tutorial: https://confluence.twitter.biz/display/ANALYTICS/Scalding+at+Twitter+Tutorial
+<pre>
+$cd source/science
+git checkout -b tweetcounter --track origin/science/tweetcounter
+</pre>
+Now follow the instructions starting with `mkdir src/scala/com/twitter/tweetcounter/`  
 
 
