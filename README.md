@@ -21,10 +21,12 @@ scala> coinFlip()
 res2: String = Tails.
 
 # Scalding Notes
-
+<pre>
 $cd source/science
 follow directions: go/scaldingrepl  
-
+</pre>
+Once scalding is running...
+<pre>
 import scala.io.Source  
 val alice = Source.fromURL("http://www.gutenberg.org/files/11/11.txt").getLines.toIterable  
 alice.take(10).foreach { line: String => println(line)}  
@@ -32,5 +34,6 @@ val alicePipe = TypedPipe.from(alice)
 alicePipe.map { line => line.length }  
 alicePipe.map { line => line.length }.limit(10).dump  
 alicePipe.map { line => line.length }.filter { length: Int => length > 0 }.limit(10).dump  
+</pre>
 
 
